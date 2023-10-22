@@ -99,6 +99,22 @@ class Main(tk.Frame):
         )
         btn_search.pack(side=tk.LEFT)                                                   # Размещение кнопку в окне, указывавая гду она(кнопка) будет находиться
 
+        self.refresh_img = tk.PhotoImage(file="./img/refresh.png")                      # Загрузили изображение кнопки обновления в переменнную
+        # Создали кнопку
+        # 1 - привязали к панели инструментов
+        # 2- установили цвет фона
+        # 3- установили размер рамки
+        # 4- установили иконку
+        # 5- вызываем функцию,которая сработает при нажатии этой кнопки
+        btn_refresh = tk.Button(
+            toolbar,
+            bg="#d7d8e0",
+            bd=0,
+            image=self.refresh_img,
+            command=self.view_records,
+        )
+        btn_refresh.pack(side=tk.LEFT)                                                  # Размещение кнопку в окне, указывавая гду она(кнопка) будет находиться
+
     def open_dialog(self):                                                              # Метод open_dialog
         Child()                                                                         # Вызвали класс, отвечающий за добавление данных в ьазу данных
 
